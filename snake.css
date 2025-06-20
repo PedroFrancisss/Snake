@@ -1,0 +1,49 @@
+/* style.css */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+#game-board {
+    width: 400px; /* 20 células * 20px/célula */
+    height: 400px; /* 20 células * 20px/célula */
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); /* Cada coluna terá 1 fração do espaço disponível */
+    grid-template-rows: repeat(20, 1fr);    /* Cada linha terá 1 fração do espaço disponível */
+    background-color: #eee; /* Cor de fundo para o tabuleiro */
+}
+
+/* Estilo para cada célula individualmente */
+.grid-cell {
+    width: 100%; /* Ocupa 100% da célula da grid */
+    height: 100%; /* Ocupa 100% da célula da grid */
+    /* opcional: border: 1px dotted #ccc; para visualizar as células */
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+}
+
+.snake-segment {
+    background-color: green; /* Cor da cobra */
+}
+
+.food {
+    background-color: red; /* Cor da comida */
+    border-radius: 50%;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
